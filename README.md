@@ -1,4 +1,4 @@
-![BG MVC Portal](https://github.com/berkguclukol/bg-mvc-portal/blob/main/public/assets/image/png/icon_64x64.png?raw=true)
+![BG MVC Portal](https://github.com/berkguclukol/bgmvcportal/blob/main/public/assets/image/logo.red.svg?raw=true)
 # BG MVC Portal 👋
 PHP project written in MVC framework that I use for my personal projects.
 ## Technology
