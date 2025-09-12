@@ -1,0 +1,5 @@
+.idea
+/core/variables.php
+/public/vendor/*/
+/.env
+*.sql
