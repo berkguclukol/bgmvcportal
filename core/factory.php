@@ -6,7 +6,7 @@ class Factory
     {
     }
 
-    static function createLink($controller, $view = "index"): string
+    static function navigate($controller, $view = "index"): string
     {
         if ($view == "index") :
             return SITE_URL . $controller;
@@ -14,16 +14,24 @@ class Factory
             return SITE_URL . $controller . "/" . $view;
         endif;
     }
-
+    static function readJsonFile($file, $isobject = true)
+    {
+         return json_decode(file_get_contents($file), $isobject);
+    }
+    static function findTitleByLink($data, $input) {
+        foreach ($data as $item) {
+            if ($item["link"] === $input) {
+                return $item["title"];
+            }
+        }
+        return "[Başlık Tanımlı Değil!]";
+    }
     static function getPageTitle(): string
     {
         $base = str_replace("act=", "", explode("&", $_SERVER['QUERY_STRING'])[0]);
-        $titles = [
-            "" => "Ana Sayfa",
-            "pages" => "Naber",
-            "pages/about" => "Naber",
-        ];
-        return $titles[$base] . " • " . SITE_TITLE;
+        $filename = "./init/titles.json";
+        $titles = self::readJsonFile($filename);
+        return self::findTitleByLink($titles, $base)  . " • " . SITE_TITLE;
     }
 
     static function getShortDayName($day, $month, $year): string

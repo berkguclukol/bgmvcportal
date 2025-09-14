@@ -4,7 +4,7 @@ class pages extends Controller
     public function index(): void
     {
         $this->render("layout/header");
-        $this->render("demo");
+        $this->render("default");
         $this->render("layout/footer");
     }
 

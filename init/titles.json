@@ -1,0 +1,15 @@
+[
+  {
+    "title" : "Ana Sayfa",
+    "link" : ""
+  },{
+    "title" : "Pages",
+    "link" : "pages"
+  },{
+    "title" : "Pages / About",
+    "link" : "pages/about"
+  },{
+    "title" : "Customers",
+    "link" : "customers"
+  }
+]

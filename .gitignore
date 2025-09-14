@@ -2,4 +2,4 @@
 /core/variables.php
 /public/vendor/*/
 /.env
-*.sql
+/public/assets/icon.ai
